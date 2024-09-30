@@ -35,6 +35,30 @@
             color: #2980b9;
             text-decoration: none;
         }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #216f99;
+        }
         /* Responsive styles */
         @media (max-width: 768px) {
             body {
@@ -85,6 +109,17 @@
             <li>Découverte de l'importance des <a href="resume_ventes_additionnelles.html" target="_blank">ventes additionnelles</a> pour l'expérience client.</li>
             <li>Suivi des clients après l'achat pour s'assurer de leur satisfaction.</li>
         </ul>
+
+        <h2>Boîte de dialogue - Pose tes questions</h2>
+        <form action="mailto:a.blanc63100@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Ton nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="message">Ta question :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer la question</button>
+        </form>
 
         <h2>5. Ton premier objectif</h2>
         <ul>
