@@ -12,70 +12,35 @@
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
+            text-align: center;
         }
         h1, h2 {
             color: #2c3e50;
         }
-        video {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 10px;
+        .construction {
+            margin-top: 50px;
         }
-        button {
-            background-color: #2980b9;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
+        .construction img {
+            width: 150px;
+            margin-bottom: 20px;
         }
-        button:hover {
-            background-color: #216f99;
-        }
-        canvas {
-            display: none;
+        .construction h2 {
+            font-size: 24px;
+            color: #e74c3c;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Recherche de résistances</h1>
-        <p>Active la caméra arrière pour prendre une photo du réservoir de la cigarette électronique et obtenir des conseils sur la résistance à utiliser.</p>
-        
-        <video id="video" autoplay></video>
-        <button id="snap">Prendre une photo</button>
-        <canvas id="canvas"></canvas>
 
-        <script>
-            // Fonction pour accéder à la caméra arrière
-            function startCamera() {
-                navigator.mediaDevices.getUserMedia({
-                    video: {
-                        facingMode: { exact: "environment" } // Utilise la caméra arrière
-                    }
-                })
-                .then(function (stream) {
-                    var video = document.getElementById('video');
-                    video.srcObject = stream;
-                })
-                .catch(function (error) {
-                    console.log("Erreur lors de l'accès à la caméra : ", error);
-                });
-            }
-
-            // Démarrer la caméra dès le chargement de la page
-            window.onload = startCamera;
-
-            // Capture de l'image
-            var canvas = document.getElementById('canvas');
-            var context = canvas.getContext('2d');
-
-            document.getElementById("snap").addEventListener("click", function() {
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                // Ici, tu peux envoyer l'image à une API pour analyse
-            });
-        </script>
+        <div class="construction">
+            <!-- Logo de construction -->
+            <img src="https://img.icons8.com/ios-filled/150/000000/under-construction.png" alt="En construction">
+            <!-- Texte en construction -->
+            <h2>EN CONSTRUCTION</h2>
+            <p>Cette fonctionnalité est en cours de développement. Revenez bientôt pour découvrir cette nouveauté !</p>
+        </div>
     </div>
 </body>
 </html>
