@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide d'accueil - Stoom Clermont-Ferrand</title>
+    <title>Guide d'accueil - Premier jour chez Stoom Clermont-Ferrand</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,8 +13,13 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #2c3e50;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 18px;
         }
         .container {
             max-width: 900px;
@@ -24,58 +29,25 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        p {
-            color: #34495e;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        button {
+        .button {
+            display: inline-block;
             background-color: #2980b9;
             color: white;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border: none;
-            cursor: pointer;
             border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
         }
-        button:hover {
+        .button:hover {
             background-color: #216f99;
-        }
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .container {
-                padding: 10px;
-                box-shadow: none;
-            }
-            ul {
-                margin-left: 15px;
-            }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Guide d'accueil - Premier jour chez Stoom Clermont-Ferrand</h1>
         <p><strong>Bienvenue dans l'équipe Stoom Clermont-Ferrand !</strong></p>
@@ -85,7 +57,7 @@
         <ul>
             <li><strong>Qui sommes-nous ?</strong> : Stoom Clermont-Ferrand est une boutique spécialisée dans la vente de cigarettes électroniques et de e-liquides. Nous aidons nos clients à arrêter de fumer avec un accompagnement personnalisé.</li>
             <li><strong>Notre mission</strong> : Offrir des solutions de sevrage tabagique via des produits de qualité, tout en étant à l'écoute des besoins des clients.</li>
-            <li><strong>Nos produits</strong> : Nous travaillons en partenariat avec Flavour Power, une marque locale et de qualité.</li>
+            <li><strong>Nos produits</strong> : Nous travaillons en partenariat avec Flavour Power, une marque auvergnate de qualité.</li>
         </ul>
 
         <h2>2. Nos valeurs</h2>
@@ -120,11 +92,11 @@
         <p>Nous attendons de toi que tu sois engagé(e) et prêt(e) à apprendre. N’hésite pas à poser des questions, toute l’équipe est là pour te soutenir.</p>
         <p>Nous avons hâte de te voir grandir avec nous !</p>
 
-         <h2>Recherche de résistances</h2>
+        <h2>Recherche de résistances</h2>
         <p>Pour identifier la bonne résistance à utiliser pour un réservoir, prends une photo et reçois des conseils sur la résistance adaptée :</p>
         <a href="quelle_resistance.html" class="button">Accéder à la recherche de résistances</a>
 
-          <h2>Si tu as une question ou un doute, ne reste pas sans réponse, contacte ton manager c'est par ici :</h2>
+        <h2>Si tu as une question ou un doute, ne reste pas sans réponse, contacte ton manager c'est par ici :</h2>
         <form action="mailto:a.blanc63100@gmail.com" method="post" enctype="text/plain">
             <label for="name">Ton nom :</label>
             <input type="text" id="name" name="name" required>
@@ -134,7 +106,12 @@
 
             <button type="submit">Envoyer la question</button>
         </form>
-    </div>
 
+        <h2>Contact</h2>
+        <p>Si tu as besoin d'assistance, tu peux contacter :</p>
+        <a href="tel:+33676908607" class="button">Appeler Arnaud (Manager)</a><br>
+        <a href="tel:+33660852190" class="button">Appeler Isabelle (PDG)</a>
+
+    </div>
 </body>
 </html>
