@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests d'évaluation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .test {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #216f99;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tests d'évaluation</h1>
+
+    <div class="test">
+        <h2>Test 1 : Connaissance des produits</h2>
+        <p>1. Quel est le principal partenaire de Stoom ?</p>
+        <input type="radio" name="test1" value="A"> Flavour Power<br>
+        <input type="radio" name="test1" value="B"> Other Brand<br>
+        <input type="radio" name="test1" value="C"> Brand X<br>
+        <input type="radio" name="test1" value="D"> Brand Y<br>
+    </div>
+
+    <div class="test">
+        <h2>Test 2 : Techniques de vente</h2>
+        <p>2. Quelle est la clé d'un bon accueil client ?</p>
+        <input type="radio" name="test2" value="A"> Un sourire<br>
+        <input type="radio" name="test2" value="B"> Ignorer le client<br>
+        <input type="radio" name="test2" value="C"> Répondre rapidement<br>
+        <input type="radio" name="test2" value="D"> Être distrait<br>
+    </div>
+
+    <div class="test">
+        <h2>Test 3 : Vente additionnelle</h2>
+        <p>3. Quelle technique est efficace pour les ventes additionnelles ?</p>
+        <input type="radio" name="test3" value="A"> Proposer un produit similaire<br>
+        <input type="radio" name="test3" value="B"> Ne rien dire<br>
+        <input type="radio" name="test3" value="C"> Ignorer le client<br>
+        <input type="radio" name="test3" value="D"> Dire que le produit est en rupture<br>
+    </div>
+
+    <button onclick="calculateResults()">Soumettre</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateResults() {
+            let score = 0;
+            let totalQuestions = 3;
+
+            // Test 1
+            if (document.querySelector('input[name="test1"]:checked')?.value === "A") {
+                score++;
+            }
+            // Test 2
+            if (document.querySelector('input[name="test2"]:checked')?.value === "A") {
+                score++;
+            }
+            // Test 3
+            if (document.querySelector('input[name="test3"]:checked')?.value === "A") {
+                score++;
+            }
+
+            // Calcul du pourcentage
+            let percentage = (score / totalQuestions) * 100;
+
+            // Affichage du résultat
+            document.getElementById("result").innerText = `Tu as obtenu ${percentage}% de réussite.`;
+
+            // Sauvegarde des résultats (optionnel)
+            localStorage.setItem('testResults', JSON.stringify({ score, totalQuestions, percentage }));
+        }
+    </script>
+
+</body>
+</html>
